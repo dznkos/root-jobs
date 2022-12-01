@@ -1,0 +1,38 @@
+<div class="container my-4">
+  <button class="btn btn-success me-2" [routerLink]="['/formjob']">Create</button>
+
+  <button class="btn btn-danger float-end" (click)="toggle()" >{{ txtToggle }}</button>
+
+    <table class="table" *ngIf="mostrar">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Publisher</th>
+          <th>Duration</th>
+          <th>Actions</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let job of jobs, let i = index" [ngClass]=" job.duration < 1 ? 'text-danger ' : 'fst-italic' " >
+          <td>
+            <span class="badge bg-primary">
+              {{ job.id }}
+            </span>
+          </td>
+          <td>{{ job.title }}</td>
+          <td>{{ job.description }}</td>
+          <td>{{ job.publisher }}</td>
+          <td>{{ job.duration >= 1 ? 'Disponible' : 'No disponible'  }}</td>
+          <td>
+            <button class="btn btn-warning me-2" [routerLink]="['/formjob/',job]">Modify</button>
+            <button class="btn btn-danger" (click)="remove(job.id!)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+

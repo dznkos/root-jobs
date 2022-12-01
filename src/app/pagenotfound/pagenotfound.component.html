@@ -1,0 +1,21 @@
+<div class="container">
+  <h3>Posts -  Pagenotfound Works!</h3>
+
+  <table class="table " >
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of listPosts">
+        <td>{{ post.id }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.body }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
