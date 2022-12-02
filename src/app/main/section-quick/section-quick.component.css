@@ -1,3 +1,69 @@
 .section-quick {
-  background-color: purple;
+  color: white;
+  padding: 8px;
+}
+
+.image{
+  width: 95px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.fast-job {
+  max-width: 280px;
+  /* height: 140px; */
+  background-color: rgb(80, 93, 207);
+  padding: 10px;
+  position: relative;
+  border-radius: 20px;
+  margin-bottom: 6px;
+}
+
+.btn-fast{
+   color: rgb(159, 224, 112);
+   position: absolute;
+   bottom: 50px;
+   right: 10px;
+   font-size: 25px;
+}
+.btn-fast i:hover{
+  color: rgb(23, 31, 101);
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.time {
+  font-size: 12px;
+  position: absolute;
+  right: 8px;
+  top: 6px;
+}
+
+.content {
+  font-size: 11px;
+  width: 80%;
+}
+
+@media (max-width:1200px) {
+
+  .container-qjobs {
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr) ;
+
+  }
+
+  .fast-job {
+    max-width: 280px;
+    /* height: 140px; */
+  }
+
+
 }

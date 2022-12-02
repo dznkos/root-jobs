@@ -16,16 +16,26 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let job of jobs, let i = index" [ngClass]=" job.duration < 1 ? 'text-danger ' : 'fst-italic' " >
+        <tr *ngFor="let job of jobs, let i = index" [ngClass]=" job.category != 'independiente' ? 'text-danger ' : 'fst-italic' " >
           <td>
             <span class="badge bg-primary">
               {{ job.id }}
             </span>
           </td>
+          <!-- { id: 115,
+            username: "bruno028",
+            email: "bruno028@april.biz",
+            title: 'Conductor ',
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique.',
+            category: 'independiente',
+            date: '05-12-2022',
+            expiration: '10-12-2022',
+          }, -->
+
           <td>{{ job.title }}</td>
           <td>{{ job.description }}</td>
-          <td>{{ job.publisher }}</td>
-          <td>{{ job.duration >= 1 ? 'Disponible' : 'No disponible'  }}</td>
+          <td>{{ job.category }}</td>
+          <!-- <td>{{ job.expiration >= 1 ? 'Disponible' : 'No disponible'  }}</td> -->
           <td>
             <button class="btn btn-warning me-2" [routerLink]="['/formjob/',job]">Modify</button>
             <button class="btn btn-danger" (click)="remove(job.id!)">Delete</button>

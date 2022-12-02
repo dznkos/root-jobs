@@ -1,15 +1,14 @@
 
 .spec {
   grid-area: section;
-  background-color: aquamarine;
+  border: 1px solid rgb(255, 201, 100);
 }
 .post {
   grid-area: article;
-  background-color: rgb(255, 255, 255);
 }
 .quick {
   grid-area: aside;
-  background-color: rgb(185, 212, 160);
+  border: 1px solid rgb(94, 110, 250);
 }
 
 .main_content {
