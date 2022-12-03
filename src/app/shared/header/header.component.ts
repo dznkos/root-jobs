@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  // ingreso data  - child
+  @Input() contador: number = 0;
+  @Output() reinicio = new EventEmitter<number>();
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  reiniciar(){
+    this.contador = 0;
+    this.reinicio.emit(this.contador)
   }
 
 }

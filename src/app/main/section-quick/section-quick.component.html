@@ -1,98 +1,18 @@
 <div class="section-quick">
 
-    <h4>Peticiones inmediatas</h4>
+    <h5 class="title-section">Peticiones inmediatas</h5>
 
     <!-- Contenedor trabajos -->
     <div class="container-qjobs">
 
       <!-- unidad tarjeta de trabajo -->
-      <div class="fast-job">
-        <span class="title">Title job</span>
+      <div class="fast-job" *ngFor="let job of jobs">
+        <span class="title">{{ job.title }}</span>
         <div class="content">
           <span class="label">Descripcion:</span>
-          <p class="desc">With supporting text below as a natural lead-in to
-            additional content. natural lead-in to additional content. text
-            below as a natural lead-in</p>
+          <p class="desc">{{ job.description }}</p>
         </div>
-        <span class="time">2 horas</span>
-        <a href="#" class="btn-fast">
-          <i class="fa-solid fa-chevron-right "></i>
-        </a>
-      </div>
-      <div class="fast-job">
-        <span class="title">Title job</span>
-        <div class="content">
-          <span class="label">Descripcion:</span>
-          <p class="desc">With supporting text below as a natural lead-in to
-            additional content. natural lead-in to additional content. text
-            below as a natural lead-in</p>
-        </div>
-        <span class="time">2 horas</span>
-        <a href="#" class="btn-fast">
-          <i class="fa-solid fa-chevron-right "></i>
-        </a>
-      </div>
-      <div class="fast-job">
-        <span class="title">Title job</span>
-        <div class="content">
-          <span class="label">Descripcion:</span>
-          <p class="desc">With supporting text below as a natural lead-in to
-            additional content. natural lead-in to additional content. text
-            below as a natural lead-in</p>
-        </div>
-        <span class="time">2 horas</span>
-        <a href="#" class="btn-fast">
-          <i class="fa-solid fa-chevron-right "></i>
-        </a>
-      </div>
-      <div class="fast-job">
-        <span class="title">Title job</span>
-        <div class="content">
-          <span class="label">Descripcion:</span>
-          <p class="desc">With supporting text below as a natural lead-in to
-            additional content. natural lead-in to additional content. text
-            below as a natural lead-in</p>
-        </div>
-        <span class="time">2 horas</span>
-        <a href="#" class="btn-fast">
-          <i class="fa-solid fa-chevron-right "></i>
-        </a>
-      </div>
-      <div class="fast-job">
-        <span class="title">Title job</span>
-        <div class="content">
-          <span class="label">Descripcion:</span>
-          <p class="desc">With supporting text below as a natural lead-in to
-            additional content. natural lead-in to additional content. text
-            below as a natural lead-in</p>
-        </div>
-        <span class="time">2 horas</span>
-        <a href="#" class="btn-fast">
-          <i class="fa-solid fa-chevron-right "></i>
-        </a>
-      </div>
-      <div class="fast-job">
-        <span class="title">Title job</span>
-        <div class="content">
-          <span class="label">Descripcion:</span>
-          <p class="desc">With supporting text below as a natural lead-in to
-            additional content. natural lead-in to additional content. text
-            below as a natural lead-in</p>
-        </div>
-        <span class="time">2 horas</span>
-        <a href="#" class="btn-fast">
-          <i class="fa-solid fa-chevron-right "></i>
-        </a>
-      </div>
-      <div class="fast-job">
-        <span class="title">Title job</span>
-        <div class="content">
-          <span class="label">Descripcion:</span>
-          <p class="desc">With supporting text below as a natural lead-in to
-            additional content. natural lead-in to additional content. text
-            below as a natural lead-in</p>
-        </div>
-        <span class="time">2 horas</span>
+        <span class="time">{{ job.expiration }}</span>
         <a href="#" class="btn-fast">
           <i class="fa-solid fa-chevron-right "></i>
         </a>

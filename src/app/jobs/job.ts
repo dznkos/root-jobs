@@ -9,5 +9,8 @@ export class Job {
   public category: string,
   public date: string,
   public expiration: string,
+  public occupation: string,
+  public image: string,
+  public priority: number
  ) { }
 }

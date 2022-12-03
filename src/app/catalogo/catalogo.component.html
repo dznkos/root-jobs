@@ -1,0 +1,12 @@
+
+<!-- <app-header [contador]="mycontador" (reinicio)="mycontador=$event"></app-header> -->
+<div class="container">
+  <h3>Catalogo</h3>
+  <h2>{{ mycontador }}</h2>
+  <button class="btn btn-primary" (click)="agregar()">Agregar</button>
+
+  <h3>COMPONENTE PADRE</h3>
+  <input type="text" value="{{texto}}" onchange="enviartxt()" >
+</div>
+
+<app-hijo [newtexto]="texto"></app-hijo>

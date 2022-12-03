@@ -12,6 +12,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormjobComponent } from './formjob/formjob.component';
 import { PostService } from './services/post.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CatalogoComponent } from './catalogo/catalogo.component';
+import { HijoComponent } from './hijo/hijo.component';
+import { ScreenjobsComponent } from './screenjobs/screenjobs.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     JobsComponent,
     PagenotfoundComponent,
     FormjobComponent,
+    CatalogoComponent,
+    HijoComponent,
+    ScreenjobsComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

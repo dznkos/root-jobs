@@ -1,3 +1,84 @@
 .specific-box {
-  /* width: 200px; */
+  color: white;
+}
+
+.card{
+  background-color: rgba(38, 103, 114, 0.564);
+}
+.spe-box{
+
+}
+
+.list-group-item{
+  background-color: transparent;
+
+}
+
+.card-link{
+  text-decoration: none;
+}
+
+.card-text {
+  font-size: 14px;
+}
+
+.profile{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  padding: 8px;
+  margin-inline: 5px;
+  /* background-color: rgb(71, 175, 255); */
+  border-radius: 6px;
+  overflow-y: hidden;
+}
+
+.username {
+  margin-left: 10px;
+}
+
+.username li {
+  padding-right: 6px;
+  font-size: 12px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.image{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  object-fit: cover;
+  object-position: -9px ;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.time {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 14px;
+}
+
+.category {
+  margin-bottom: 15px;
+  font-size: 11px;
+}
+
+.content-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 12px;
+}
+
+.date {
+  font-size: 11px;
+}
+.actions {
+  padding: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-evenly;
 }

@@ -1,130 +1,351 @@
 
 *{
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 .section-box {
-  padding: 10px;
+  padding: 0px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 270px 2fr;
+  gap: 4px;
+
 }
 
 .input-group {
-  width: 420px;
+  width: 400px;
 }
 
 .section-box h4 {
-  margin-inline: 15px;
-  color: rgb(60, 99, 254);
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+
 }
 
 
 /* All Trabajos */
 .container-jobs {
-  width: 92%;
-  min-width: 500px;
+  /* min-width: 500px; */
   margin: auto;
-  padding: 15px 0;
+  padding: 10px 5px;
 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+@media (min-width: 600px){
+
+  .container-jobs {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 12px;
+    row-gap: 12px;
+    padding: 40px;
+  }
 
 }
 
-/* Card Trabajo individual */
+@media (min-width: 1500px){
+
+  .container-jobs {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+}
+
+/* Card Trabajo */
 .job-card {
+  color: #ffff;
   width: 190px;
   box-sizing: border-box;
-  background-color: rgb(83, 187, 163);
+  background-color:  rgb(65, 117, 212);
   border-radius: 15px;
   padding: 10px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .job-card:hover {
-  background-color: rgb(73, 155, 217);
-
+  /* background-color: rgb(214, 58, 58); */
 }
+/* END Card Trabajo */
 
-.job-title{
+.title{
   font-size: 13px;
-}
-.txt-desc{
-  font-size: 10px;
-  font-weight: bold;
-}
-
-.job-desc{
- font-size: 10px;
 }
 
 /* CONTENIDO JOB */
-.job-content {
-  /* background-color: brown; */
+.content {
   border-radius: 6px;
-  max-height: 70px;
-  overflow-y: hidden;
+  /* max-height: 70px; */
+  /* overflow-y: hidden; */
 }
 
-.job-desc {
-  margin: 0px !important;
+.label{
+  font-size: 11px;
+  font-weight: bold;
 }
 
-/* CREADOR JOB */
+.description {
+  font-size: 11px;
+  height: 82px;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+}
+/* END */
+
+/* PROFILE JOB */
 .profile{
+
   display: flex;
   justify-content: end;
   align-items: center;
   padding: 2px;
-  /* background-color: cornflowerblue; */
-  border: 1px solid grey;
+  /* border: 1px solid rgb(255, 255, 255); */
+  background-color: rgb(154, 64, 40);
   border-radius: 6px;
   overflow-y: hidden;
 }
 
 .username li {
-  padding-right: 5px;
-  font-size: 9px;
+  padding-right: 6px;
+  font-size: 10px;
   text-decoration: none;
   list-style-type: none;
 }
 
-.personal-img{
+.image{
   width: 35px;
   height: 35px;
   border-radius: 20px;
   object-fit: cover;
   object-position: -9px ;
-
+  border: 1px solid rgb(255, 255, 255);
 }
 
-.job-card a{
+.btn-apply{
   font-size: 11px;
   height: 25px;
   width: 50px;
-  background-color: rgb(50, 106, 237);
+  background-color: rgb(66, 50, 237);
   text-decoration: none;
-  padding: 4px;
+  text-align: center;
+  padding: 5px;
   border-radius: 5px;
   color: aliceblue;
   font-weight: 500;
-  position: relative;
-  text-align: center;
-  bottom: 2px;
-  left: 35%;
+  bottom: 0;
+  align-self: center;
+  margin-top: 4px;
+}
+.btn-apply:hover{
+  background-color: rgb(13, 72, 210);
+  color: rgb(255, 255, 255);
 }
 
 .time {
-  background-color: rgb(67, 67, 244);
-  font-size: 11px;
+  background-color: rgba(67, 67, 244, 0.5);
+  font-size: 8px;
   position: absolute;
   top: 5px;
   right: 5px;
   color: white;
   border-radius: 5px;
   padding: 3px;
+  letter-spacing: 0.05rem;
 }
 
 
-.job-card a:hover{
 
-  background-color: rgb(13, 72, 210);
-  color: rgb(255, 255, 255);
+/* PROFILE */
+
+html {
+  font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+
 }
+
+.offcanvas-header {
+  background-color: #89bff9;
+}
+
+.offcanvas-body {
+  width: 100% !important;
+  padding: 0;
+  overflow: hidden;
+  background-color: #89bff9;
+}
+
+.offcanvas-title {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h5 {
+  font-size: 1.28571429em;
+  font-weight: 700;
+  line-height: 1.2857em;
+  margin: 0;
+}
+
+.card {
+  font-size: 1em;
+  overflow: hidden;
+  padding: 0;
+  border: none;
+  border-radius: .28571429rem;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+}
+
+.card-block {
+  font-size: 1em;
+  position: relative;
+  margin: 0;
+  padding: 0 1em 1em 1em;
+  border: none;
+  border-top: 1px solid rgba(34, 36, 38, .1);
+  box-shadow: none;
+}
+
+.card-img-top {
+  /* display: block; */
+  width: 100%;
+  height: auto;
+}
+
+.card-title {
+  font-size: 1.28571429em;
+  font-weight: 700;
+  line-height: 1.2857em;
+}
+
+.card-text {
+  clear: both;
+  margin-top: .5em;
+  color: rgba(0, 0, 0, .68);
+}
+
+.card-footer {
+  font-size: 1em;
+  position: static;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  padding: .75em 1em;
+  color: rgba(0, 0, 0, .4);
+  border-top: 1px solid rgba(0, 0, 0, .05) !important;
+  background: #fff;
+}
+
+.card-inverse .btn {
+  border: 1px solid rgba(0, 0, 0, .05);
+}
+
+.profileuser {
+  position: absolute;
+  top: -12px;
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 75px;
+  height: 75px;
+  margin: 0;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.profile-avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #eeeeee;
+}
+
+.profile-inline {
+  position: relative;
+  top: 0;
+  display: inline-block;
+}
+
+.profile-inline ~ .card-title {
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: top;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+
+.meta {
+  margin-left: 70px;
+  width: 275px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1em;
+  color: rgba(0, 0, 0, .4);
+}
+.meta .role {
+  font-size: 0.7rem;
+}
+
+.meta a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, .4);
+}
+
+.meta a:hover {
+  color: rgba(0, 0, 0, .87);
+}
+
+/* Tabs Card */
+.tab-card {
+border:1px solid #eee;
+}
+
+.tab-card-header {
+background:none;
+}
+/* Default mode */
+.tab-card-header > .nav-tabs {
+border: none;
+margin: 0px;
+}
+.tab-card-header > .nav-tabs > li {
+margin-right: 2px;
+}
+.tab-card-header > .nav-tabs > li > a {
+border: 0;
+border-bottom:2px solid transparent;
+margin-right: 0;
+color: #737373;
+padding: 2px 15px;
+}
+
+.tab-card-header > .nav-tabs > li > a.show {
+  border-bottom:2px solid #007bff;
+  color: #007bff;
+}
+.tab-card-header > .nav-tabs > li > a:hover {
+  color: #007bff;
+}
+
+.tab-card-header > .tab-content {
+padding-bottom: 0;
+}
+
+.list-group-item i:hover {
+
+  zoom: 1.2;
+}
+
 

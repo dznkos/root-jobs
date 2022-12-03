@@ -4,6 +4,7 @@ import { SectionSpecificComponent } from './section-specific/section-specific.co
 import { SectionPostComponent } from './section-post/section-post.component';
 import { SectionQuickComponent } from './section-quick/section-quick.component';
 import { MainComponent } from './main.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { MainComponent } from './main.component';
     MainComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     SectionSpecificComponent,

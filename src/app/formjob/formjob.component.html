@@ -2,9 +2,9 @@
 <div class="container my-5">
   <div class="row">
   <div class="col-md-5 offset-md-3">
-    <h5 class="card-title">Registro de Trabajo</h5>
+    <h5 class="card-title text-center">Registro de Anuncio</h5>
     <form [formGroup]="formJob" (ngSubmit)="onSubmit()" novalidate>
-      <div class="form-group mt-2">
+      <!-- <div class="form-group mt-2">
         <label for="id">Id: </label>
         <input class="form-control" type="text" id="id" formControlName="id"
         [ngClass]="{'is-invalid': submitted && f['id'].errors}">
@@ -16,10 +16,11 @@
             Id debe tener max 2 digitos
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="form-group mt-2">
         <label for="title">Titulo: </label>
         <input class="form-control" type="text" id="title" formControlName="title"
+        placeholder="Ejm. Seguridad Personal"
         [ngClass]="{'is-invalid': submitted && f['title'].errors}">
         <div *ngIf="submitted && f['title'].errors" class="text-danger">
           <div *ngIf="submitted && f['title'].errors['required']">
@@ -32,8 +33,8 @@
       </div>
       <div class="form-group mt-2">
         <label for="description">Descripcion: </label>
-        <input class="form-control" type="text" id="description" formControlName="description"
-        [ngClass]="{'is-invalid': submitted && f['description'].errors}">
+        <textarea class="form-control" rows="3" placeholder="Describe los requerimientos del puesto" type="text" id="description" formControlName="description"
+        [ngClass]="{'is-invalid': submitted && f['description'].errors}"></textarea>
         <div *ngIf="submitted && f['description'].errors" class="text-danger">
           <div *ngIf="submitted && f['description'].errors['required']">
             Descripcion is required
@@ -44,7 +45,7 @@
         </div>
       </div>
       <div class="form-group mt-2">
-        <label for="duration">Duracion: </label>
+        <label for="duration">Duracion de Anuncio(opcional): </label>
         <input class="form-control" type="text" id="duration" formControlName="duration"
         [ngClass]="{'is-invalid': submitted && f['duration'].errors}">
         <div *ngIf="submitted && f['duration'].errors" class="text-danger">
@@ -60,15 +61,12 @@
         </div>
       </div>
       <div class="form-group mt-2">
-        <label for="publisher">Publicador: </label> f['publisher']
+        <label for="publisher">Ubicacion: </label>
         <input class="form-control" type="text" id="publisher" formControlName="publisher"
         [ngClass]="{'is-invalid': submitted && f['publisher'].errors}">
         <div *ngIf="submitted && f['publisher'].errors" class="text-danger">
           <div *ngIf="submitted && f['publisher'].errors['required']">
-            Publicador is required
-          </div>
-          <div *ngIf="submitted && f['publisher'].errors['minlength']">
-            Publicador debe tener minimo 5 caracteres
+            Ubicacion is required
           </div>
         </div>
       </div>
@@ -83,3 +81,12 @@
   </div>
   </div>
     <!-- <button class="btn btn-danger float-end" (click)="toggle()" >{{ txtToggle }}</button> -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        ...
+      </div>
+    </div>

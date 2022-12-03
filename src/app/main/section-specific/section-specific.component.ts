@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-section-specific',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SectionSpecificComponent implements OnInit {
 
+  @Input() currentJob: any;
+
   constructor() { }
 
   ngOnInit(): void {
+
+    console.log(this.currentJob)
   }
 
 }

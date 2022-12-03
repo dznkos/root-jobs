@@ -1,0 +1,26 @@
+<div class="container text-center">
+  <main class="form-signin w-100 m-auto">
+    <form>
+      <img class="imglogo mb-4" src="../../assets/logo/logo.jpeg" alt="" width="92" height="77">
+      <h1 class="h3 mb-3 fw-normal">Inicia sesión</h1>
+
+      <div class="form-floating" bis_skin_checked="1">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput text-muted">Email address</label>
+      </div>
+      <div class="form-floating" bis_skin_checked="1">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword text-muted">Password</label>
+      </div>
+
+      <div class="checkbox mb-3" bis_skin_checked="1">
+        <label class="remember" >
+          <input type="checkbox" value="remember-me"> Recuerdame
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit"
+      [routerLink]="['/home']">Ingresar</button>
+      <p class="mt-5 mb-3 text-muted">© 2022</p>
+    </form>
+  </main>
+</div>

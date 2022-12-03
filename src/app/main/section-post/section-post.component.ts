@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Job } from 'src/app/jobs/job';
+
+import { Jobs } from '../../jobs/job.json';
 
 @Component({
   selector: 'app-section-post',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SectionPostComponent implements OnInit {
 
-  constructor() { }
+
+  jobs?: Job[];
+
+  cjob!: Job;
+
+  constructor() {
+    this.jobs = Jobs;
+
+  }
 
   ngOnInit(): void {
+  }
+
+  setjob(code : any):void {
+
+    this.cjob = code
   }
 
 }

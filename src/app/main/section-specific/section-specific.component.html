@@ -1,4 +1,52 @@
-<div class="specific-box py-3">
-
-  <h3>data job</h3>
+<div class="specific-box" *ngIf="currentJob==undefined">
+  <h4>No has seleccionado ningun anuncio</h4>
 </div>
+
+<div class="specific-box py-3" *ngIf="currentJob!=undefined">
+  <h4>Detalle de anuncio </h4>
+  <div class="spe-box">
+    <div class="card m-2" >
+      <div class="card-body">
+        <h5 class="card-title">{{ currentJob.title }}</h5>
+        <span class="badge bg-danger category" >{{ currentJob.category }}</span>
+        <p class="card-text">{{ currentJob.description }}</p>
+      </div>
+      <div class="content-date">
+        <span>expira: <span class="date">{{ currentJob.expiration }}</span>  </span>
+        <span>publicacion: <span class="date"> {{ currentJob.date }}</span></span>
+      </div>
+      <ul class="list-group my-2">
+        <div class="profile">
+          <img class="image" src="https://okdiario.com/img/2022/03/11/vladimir-putin-655x368.jpg" alt="">
+          <div class="username">
+            <li>{{ currentJob.username }}</li>
+            <li>{{ currentJob.occupation }}</li>
+            <li>{{ currentJob.email }}</li>
+          </div>
+
+        </div>
+        <span class="time">{{ currentJob.date }}</span>
+      </ul>
+
+      <div class="actions">
+        <a href="#" class="btn btn-primary ">Postular</a>
+        <a href="#" class="btn btn-primary ">
+          <i class="fa-solid fa-message"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- { id: 112,
+  username: "thiago92",
+  email: "thiago92@april.biz",
+  title: 'Tecnico de pc',
+  occupation: 'Admin',
+  image: 'https://okdiario.com/img/2022/03/11/vladimir-putin-655x368.jpg',
+  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique.',
+  category: 'eventual',
+  date: '05-12-2022',
+  expiration: '12-12-2022',
+  priority: 0
+}, -->

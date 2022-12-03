@@ -15,21 +15,20 @@
   display: grid;
   gap: 2px;
   grid-template:
-    "section article " auto
-    "aside aside " auto /
-    250px minmax(450px, auto) ;
-  width: 100%;
+    " article " auto
+    " aside " auto
+     ;
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
 
   .main_content {
     display: grid;
     gap: 2px;
     grid-template:
-      "section article aside" auto /
-      250px    auto    250px;
+      "article aside" auto /
+       auto    250px;
 
   }
 }

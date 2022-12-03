@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Job } from 'src/app/jobs/job';
+import { Jobs } from '../../jobs/job.json'
 
 @Component({
   selector: 'app-section-quick',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SectionQuickComponent implements OnInit {
 
+  jobs!: Job[];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.jobs = Jobs.filter( j => j.priority == 1);
   }
 
 }

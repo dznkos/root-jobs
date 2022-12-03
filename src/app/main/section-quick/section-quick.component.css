@@ -1,6 +1,9 @@
 .section-quick {
   color: white;
-  padding: 8px;
+  padding: 5px;
+}
+.title-section  {
+  margin: 10px 15px;
 }
 
 .image{
@@ -48,10 +51,10 @@
   width: 80%;
 }
 
-@media (max-width:1200px) {
+@media (max-width:1300px) {
 
   .container-qjobs {
-    width: 90%;
+    width: 95%;
     margin: auto;
 
     display: grid;
@@ -63,6 +66,10 @@
   .fast-job {
     max-width: 280px;
     /* height: 140px; */
+  }
+
+  .title-section  {
+    margin: 10px 25px;
   }
 
 
